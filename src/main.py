@@ -35,27 +35,22 @@ class TravelAssistant:
 
 class MainHandler:
     def __init__(self):
-        self.travel_assistant = TravelAssistant(self)
+        self.travel_assistant = TravelAssistant()
         self.luis = LUIS()
-        self.explore_world = Explore_world()
-        self.finalization = Finalization()
-        self.login = Login()
-        self.register = Register()
-        self.perfect_trip = PerfectTrip()
+        self.bots = {
+            "exploretheworld": Explore_world(),
+            "login": Login(),
+            "register": Register(),
+            "perfecttrip": PerfectTrip(),
+            "gotoout": PerfectTrip(),  # Se "gotoout" deve ir para a mesma classe que "perfecttrip"
+        }
 
     def start_conversation_response_option(self, option):
         analysis_result = self.luis.analyze_language(text=option)
+        bot_instance = self.bots.get(analysis_result)
 
-        if analysis_result == "exploretheworld":
-            self.explore_world.minha_funcao_principal()
-        elif analysis_result == "login":
-            self.login.minha_funcao_principal()
-        elif analysis_result == "register":
-            self.register.minha_funcao_principal()
-        elif analysis_result == "perfecttrip":
-            self.perfect_trip.minha_funcao_principal()
-        elif analysis_result == "gotoout":
-            self.perfect_trip.minha_funcao_principal()
+        if bot_instance:
+            bot_instance.minha_funcao_principal()
         else:
             self.default_handler()
 
