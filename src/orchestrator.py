@@ -10,6 +10,8 @@ from bots.perfect_trip import PerfectTrip
 class TravelAssistant:
     def __init__(self, main_handler):
         self.main_handler = main_handler
+        self.finalization = Finalization(self)
+       
 
     def display_bot_response(self, response):
         print(f"Bot: {response}\n")
@@ -33,6 +35,7 @@ class TravelAssistant:
             return "Boa noite"
 
 
+# Restante do seu código em orchestrator.py
 class MainHandler:
     def __init__(self):
         self.travel_assistant = TravelAssistant(self)
@@ -42,7 +45,7 @@ class MainHandler:
             "login": Login(),
             "register": Register(),
             "perfecttrip": PerfectTrip(),
-            "gotoout": Finalization(), 
+            "gotoout": Finalization(self), 
         }
 
     def start_conversation_response_option(self, option):
