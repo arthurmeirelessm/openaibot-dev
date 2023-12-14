@@ -1,4 +1,5 @@
 import re
+import sys
 
 class Finalization:
     def __init__(self, travel_assistant):
@@ -16,3 +17,4 @@ class Finalization:
     
     def send_finalization_message(self):
         print("Obrigado por usar nosso serviço! Até logo. 😊")
+        sys.exit()
