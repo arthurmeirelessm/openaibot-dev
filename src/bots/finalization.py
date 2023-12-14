@@ -5,5 +5,5 @@ class Finalization:
     def __init__(self):
         pass
 
-    def minha_funcao_principal(self):
-        print("finalization")
+    def introduction(self):
+        print("Deseja finalizar?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial")

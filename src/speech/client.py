@@ -2,33 +2,22 @@ from dotenv import load_dotenv
 import os
 import azure.cognitiveservices.speech as speech_sdk
 
+load_dotenv()
 
 class Speech:
     def __init__(self):
         self.subscription_key = os.environ.get("SPEECH_SUBSCRIPTION_KEY")
         self.region = os.environ.get("REGION")
+        self.speech_config = speech_sdk.SpeechConfig(self.subscription_key, self.region)
+        self.speech_config.speech_recognition_language = "pt-BR"
+        self.audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
 
-    def speech_to_text(self):
-        try:
-            global speech_config
-            load_dotenv()
-            subscription_key = "008a154a276b4700887f4a759e8c0c5b"
-            region = "westus2"
-
-            speech_config = speech_sdk.SpeechConfig(subscription_key, region)
-            speech_config.speech_recognition_language = "pt-BR"
-
-            command = self.TranscribeCommand()
-            print(command.lower())
-
-        except Exception as ex:
-            print(ex)
 
     def TranscribeCommand(self):
         command = ""
 
         audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
-        speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
+        speech_recognizer = speech_sdk.SpeechRecognizer(self.speech_config, self.audio_config)
         print("Falar agora...")
         speech = speech_recognizer.recognize_once_async().get()
 
@@ -42,3 +31,12 @@ class Speech:
                 print(cancellation.error_details)
 
         return command
+    
+    def Synthesizer_input(self, gpt_response):
+        self.speech_config.speech_synthesis_voice_name = "pt-BR-YaraNeural"
+        speech_synthesizer = speech_sdk.SpeechSynthesizer(self.speech_config)  
+        
+        speak = speech_synthesizer.speak_text_async(gpt_response).get()
+        if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
+            print(speak.reason)
+

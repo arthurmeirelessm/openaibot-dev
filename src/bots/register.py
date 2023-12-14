@@ -5,5 +5,5 @@ class Register:
     def __init__(self):
         pass
 
-    def minha_funcao_principal(self):
+    def introduction(self):
         print("register")

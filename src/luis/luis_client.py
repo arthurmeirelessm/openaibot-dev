@@ -21,9 +21,9 @@ class LUIS:
         }
 
         self.parameters = {
-            "projectName": "openaibot",
+            "projectName": "openaibotV3",
             "verbose": True,
-            "deploymentName": "V7deploy",
+            "deploymentName": "V2deploy",
             "stringIndexType": "TextElement_V8",
         }
 
@@ -31,7 +31,6 @@ class LUIS:
         self.logger = logging.getLogger(__name__)
 
     def analyze_language(self, text):
-        print(text)
         try:
             data = {
                 "kind": "Conversation",
