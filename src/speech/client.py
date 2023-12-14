@@ -11,26 +11,21 @@ class Speech:
         self.speech_config = speech_sdk.SpeechConfig(self.subscription_key, self.region)
         self.speech_config.speech_recognition_language = "pt-BR"
         self.audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
-
-
+        
+    
     def TranscribeCommand(self):
         command = ""
-
+        
         audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
-        speech_recognizer = speech_sdk.SpeechRecognizer(self.speech_config, self.audio_config)
+        speech_recognizer = speech_sdk.SpeechRecognizer(self.speech_config, audio_config)
         print("Falar agora...")
         speech = speech_recognizer.recognize_once_async().get()
-
         if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
             command = speech.text
-        else:
-            print(speech.reason)
-            if speech.reason == speech_sdk.ResultReason.Canceled:
-                cancellation = speech.cancellation_details
-                print(cancellation.reason)
-                print(cancellation.error_details)
-
+        elif speech.reason == speech_sdk.ResultReason.Canceled:
+            command = None
         return command
+
     
     def Synthesizer_input(self, gpt_response):
         self.speech_config.speech_synthesis_voice_name = "pt-BR-YaraNeural"
