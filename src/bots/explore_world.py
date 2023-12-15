@@ -24,14 +24,16 @@ class Explore_world:
         time.sleep(3)
 
         user_input = self.speech.TranscribeCommand()
-
+                
         luis_intent = self.luis.analyze_language(user_input)
+        
+        final_input = f"Forneça uma resposta direta e em poucas linhas para essa pergunta: {user_input}"
 
         intent_actions = {
             "gotoout": self.finalization.introduction,
-            "exploretheworld": lambda: self.explore_culture(user_input),
+            "exploretheworld": lambda: self.explore_culture(final_input),
         }
-        intent_actions.get(luis_intent, self.handle_unrecognized_intent)()
+        intent_actions.get(luis_intent['topIntent'], self.handle_unrecognized_intent)()
         self.ask_more_questions(luis_intent)
 
     def handle_unrecognized_intent(self):
@@ -45,11 +47,11 @@ class Explore_world:
 
     def ask_more_questions(self, luis_intent):
         if luis_intent == "exploretheworld":
-            print("Deseja fazer outra pergunta?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial")
+            print("\nBot: Deseja fazer outra pergunta?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial\n")
             user_input = input("You: ")
-            if re.search(r"\b(sim|claro|quero)\b", user_input, flags=re.IGNORECASE):
+            if re.search(r"\b(sim|claro|quero|1)\b", user_input, flags=re.IGNORECASE):
                 self.call_speech()
-            elif re.search(r"\b(n[ãa]o|nopes|nada)\b", user_input, flags=re.IGNORECASE):
+            elif re.search(r"\b(n[ãa]o|nopes|nada|2)\b", user_input, flags=re.IGNORECASE):
                 self.finalization.introduction()
             else:
                 self.finalization.travelAssistant.start_conversation()

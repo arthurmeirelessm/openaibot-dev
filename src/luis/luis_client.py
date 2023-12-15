@@ -23,7 +23,7 @@ class LUIS:
         self.parameters = {
             "projectName": "openaibotV3",
             "verbose": True,
-            "deploymentName": "V3deploy",
+            "deploymentName": "V5deploy",
             "stringIndexType": "TextElement_V8",
         }
 
@@ -53,7 +53,16 @@ class LUIS:
                 top_intent = (
                     result_json.get("result", {}).get("prediction", {}).get("topIntent")
                 )
-                return top_intent
+                entities = result_json.get("result", {}).get("prediction", {}).get("entities", [])
+                
+                # Pegar o primeiro item único de categories como string
+                unique_category = next(iter(set([entity.get("category") for entity in entities])), None)
+                
+                response_json = {
+                    "topIntent": top_intent,
+                    "categories": unique_category
+                }
+                return response_json
             else:
                 self.logger.error(f"Falha: {response.status_code}")
                 self.logger.error(response.json())
@@ -65,3 +74,4 @@ class LUIS:
         except Exception as ex:
             self.logger.error(f"Erro inesperado: {ex}")
             return None
+        

@@ -24,6 +24,7 @@ class Speech:
             command = speech.text
         elif speech.reason == speech_sdk.ResultReason.Canceled:
             command = None
+            print(command)
         return command
 
     

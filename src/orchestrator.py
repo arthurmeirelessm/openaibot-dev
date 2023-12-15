@@ -17,7 +17,7 @@ class TravelAssistant:
     def start_conversation(self):
         greeting = self.get_greeting()
         print(
-            f"Bot: {greeting}! Bem-vindo a ViajeBem Destinos, seu assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n1 - Desbravar o mundo\n2 - Cadastro\n3 - Login\n4 - Sua viagem perfeita\n"
+            f"Bot: {greeting}! Bem-vindo a ViajeBem Destinos, seu assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n- Cadastro\n- Login\n- Sua viagem perfeita\n- Desbravar o mundo\n"
         )
         user_input = input("You: ")
         print("\n")
@@ -35,7 +35,7 @@ class TravelAssistant:
 
     def start_conversation_response_option(self, option):
         analysis_result = LUIS().analyze_language(text=option)
-        bot_instance = self.get_bot_instance(analysis_result)
+        bot_instance = self.get_bot_instance(analysis_result['topIntent'])
 
         if bot_instance:
             bot_instance.introduction()
@@ -47,7 +47,7 @@ class TravelAssistant:
             "exploretheworld": Explore_world(self),
             "login": Login(),
             "register": Register(),
-            "perfecttrip": PerfectTrip(),
+            "perfecttrip": PerfectTrip(self),
             "gotoout": Finalization(self),
         }
         return bots.get(analysis_result)
@@ -61,7 +61,7 @@ class TravelAssistant:
             user_init = input("You: ")
             print("\n")
             analysis_result = LUIS().analyze_language(text=user_init)
-            bot_instance = self.get_bot_instance(analysis_result)
+            bot_instance = self.get_bot_instance(analysis_result['topIntent'])
             if analysis_result == "gotoout":
                 bot_instance.introduction()
             self.start_conversation()

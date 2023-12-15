@@ -12,7 +12,6 @@ class GPT3ChatClient:
         openai.api_key = api_key
 
     def generate_response(self, user_input):
-        print(user_input)
         resposta = openai.ChatCompletion.create(
             model="gpt-3.5-turbo", messages=[{"role": "user", "content": user_input}]
         )
