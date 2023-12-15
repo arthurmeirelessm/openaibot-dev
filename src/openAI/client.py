@@ -1,4 +1,3 @@
-# Nome do arquivo: gpt3_example.py
 import openai
 from dotenv import load_dotenv
 import os

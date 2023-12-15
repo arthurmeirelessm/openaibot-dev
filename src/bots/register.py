@@ -1,5 +1,3 @@
-# MeuArquivo.py
-
 
 class Register:
     def __init__(self):

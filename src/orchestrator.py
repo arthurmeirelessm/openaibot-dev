@@ -1,4 +1,3 @@
-# orchestrator.py
 from datetime import datetime
 from luis.luis_client import LUIS
 from bots.explore_world import Explore_world

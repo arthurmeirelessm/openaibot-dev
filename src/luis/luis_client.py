@@ -55,7 +55,6 @@ class LUIS:
                 )
                 entities = result_json.get("result", {}).get("prediction", {}).get("entities", [])
                 
-                # Pegar o primeiro item único de categories como string
                 unique_category = next(iter(set([entity.get("category") for entity in entities])), None)
                 
                 response_json = {
