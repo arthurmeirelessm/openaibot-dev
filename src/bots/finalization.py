@@ -17,21 +17,26 @@ class Finalization:
             self.travelAssistant.start_conversation()
     
     def faq(self):
-        print("Antes de ir, avalise o meu serviço. Deixe um comentário logo abaixo\n")
+        print("\033[1mSua avaliação é importante pra mim! Antes de ir, avalie o meu serviço. Conte-me como foi sua experiência aqui em baixo: 🙏🏻\033[0m\n")
         user_input = input("You: ")
         print("\n")
         documents = [user_input]
         analysis = self.sentiment.analyze_sentiment(documents)
         
-        self.finalization_case_good_analysis() if analysis == "positive" else self.finalization_case_bad_analysis()
+        self.finalization_case_good_analysis() if analysis == "positive" else (self.finalization_case_neutral_analysis() if analysis == "neutral" else self.finalization_case_bad_analysis())
 
+    
     def finalization_case_good_analysis(self):
-        print("Que bom que gostou!!! Fico feliz e obrigado por usar nosso serviço! Até logo. 😊")    
+        print("Fico feliz que teve uma experiência satisfatória comigo! Obrigado por escolher nosso serviço. Até logo! 😊")
+        sys.exit()
+    
+    def finalization_case_neutral_analysis(self):
+        print("Agradecemos por utilizar nosso serviço. Estou aqui para ajudar. Até logo. 😊")
         sys.exit()
     
     def finalization_case_bad_analysis(self):
-        print("Que pena 🫤. Prometo que vou melhorar e obrigado por usar nosso serviço! Até logo.")
-        
+        print("Lamentamos que sua experiência não tenha sido satisfatória. 🫤 Faremos o possível para melhorar. Obrigado por usar nosso serviço. Até logo.")
+    
         # MANDAR CONTAGENS DE AVALIAÇÕES PRA UM CONTAINER BLOB STORAGE AZURE PARA LOGS E MELHORIA CONTIMUA DO BOT
         
         sys.exit()

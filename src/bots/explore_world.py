@@ -10,6 +10,7 @@ import re
 
 class Explore_world:
     def __init__(self, travel_assistant):
+        self.travel_assistant = travel_assistant
         self.luis = LUIS()
         self.openAI = GPT3ChatClient()
         self.speech = Speech()
