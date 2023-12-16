@@ -23,7 +23,7 @@ class LUIS:
         self.parameters = {
             "projectName": "openaibotV3",
             "verbose": True,
-            "deploymentName": "V6deploy",
+            "deploymentName": "V7deploy",
             "stringIndexType": "TextElement_V8",
         }
 

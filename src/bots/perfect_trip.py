@@ -67,26 +67,24 @@ class PerfectTrip:
          print("Bot: \033[1mEntão prentede viajar para curtir, hein!? rs\033[0m🍸🥳\n\nPeça sugestão de lugares que tenha os tipo de festa do seu interesse.\n\033[1mExemplo: Estou buscando um destino com as melhores festas eletrônicas. Alguma recomendação?\033[0m\n")
     
     
+    
     def verify_entities(self, user_input):
         luis_result = self.luis.analyze_language(user_input)
-        if luis_result['topIntent'] == "gotoout":
-            self.finalization.introduction()
-        elif luis_result['topIntent'] == "back":
-            self.travel_assistant.start_conversation()
-        elif luis_result['categories'] == "adventure_activities":
-            self.intro_adventure_activities()
-        elif luis_result['categories'] == "cooking":
-            self.intro_cooking()
-        elif luis_result['categories'] == "natural_beauty":
-            self.intro_natural_beauty()
-        elif luis_result['categories'] == "cultural":
-            self.intro_cultural()
-        elif luis_result['categories']== "party":
-            self.intro_party()
-        else:
-            self.default_intro()
         
+        intent_mapping = {
+        "gotoout": self.finalization.introduction,
+        "back": self.travel_assistant.start_conversation,
+        "adventure_activities": self.intro_adventure_activities,
+        "cooking": self.intro_cooking,
+        "natural_beauty": self.intro_natural_beauty,
+        "cultural": self.intro_cultural,
+        "party": self.intro_party
+        }
+        intent = luis_result.get('topIntent') if luis_result.get('topIntent') in intent_mapping else luis_result.get('categories')
+        action = intent_mapping.get(intent, self.default_intro)
+        action()
         self.call_speech()
+
     
     def default_intro(self):
         print("\nDesculpe, não consegui identificar sua intenção. 🫤\nEscolha uma das opções listadas.\n")

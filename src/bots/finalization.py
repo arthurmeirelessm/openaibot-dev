@@ -1,11 +1,16 @@
 import re
 import sys
 from analysis.sentiment_client import SentimentAnalyzer
+from azure.storage.blob import BlobServiceClient
+
 
 class Finalization:
     def __init__(self, travel_assistant):
         self.travelAssistant = travel_assistant
         self.sentiment = SentimentAnalyzer()
+        self.connection_string = "YOUR_AZURE_STORAGE_CONNECTION_STRING"
+        self.container_name = "seu-container"
+        self.blob_name = "nome-do-seu-arquivo-de-log.txt"
         
     def introduction(self):
         print("\nBot: Deseja finalizar?\n\033[1m1 - Sim\n2 - Não, voltar a opção inicial\033[0m\n")
@@ -23,7 +28,7 @@ class Finalization:
         documents = [user_input]
         analysis = self.sentiment.analyze_sentiment(documents)
         
-        self.finalization_case_good_analysis() if analysis == "positive" else (self.finalization_case_neutral_analysis() if analysis == "neutral" else self.finalization_case_bad_analysis())
+        self.finalization_case_good_analysis() if analysis == "positive" else (self.finalization_case_neutral_analysis() if analysis == "neutral" else self.finalization_case_bad_analysis(user_input))
 
     
     def finalization_case_good_analysis(self):
@@ -34,9 +39,9 @@ class Finalization:
         print("Agradecemos por utilizar nosso serviço. Estou aqui para ajudar. Até logo. 😊")
         sys.exit()
     
-    def finalization_case_bad_analysis(self):
+    def finalization_case_bad_analysis(self, user_input):
         print("Lamentamos que sua experiência não tenha sido satisfatória. 🫤 Faremos o possível para melhorar. Obrigado por usar nosso serviço. Até logo.")
     
-        # MANDAR CONTAGENS DE AVALIAÇÕES PRA UM CONTAINER BLOB STORAGE AZURE PARA LOGS E MELHORIA CONTIMUA DO BOT
+        # MANDAR CONTAGENS DE AVALIAÇÕES PRA UM CONTAINER BLOB STORAGE AZURE FILES PARA LOGS E MELHORIA CONTIMUA DO BOT
         
         sys.exit()

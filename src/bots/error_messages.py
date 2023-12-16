@@ -1,4 +1,3 @@
-# error_messages.py
 from bots.finalization import Finalization
 
 class ErrorMessages:
