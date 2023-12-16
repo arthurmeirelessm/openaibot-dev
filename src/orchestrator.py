@@ -5,6 +5,8 @@ from bots.finalization import Finalization
 from bots.login import Login
 from bots.register import Register
 from bots.perfect_trip import PerfectTrip
+from authetication.backend import Backend
+
 
 class TravelAssistant:
     def __init__(self):
@@ -44,8 +46,8 @@ class TravelAssistant:
     def get_bot_instance(self, analysis_result):
         bots = {
             "exploretheworld": Explore_world(self),
-            "login": Login(),
-            "register": Register(),
+            "login": Login(self),
+            "register": Register(self),
             "perfecttrip": PerfectTrip(self),
             "gotoout": Finalization(self),
         }

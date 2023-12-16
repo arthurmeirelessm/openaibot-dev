@@ -21,9 +21,9 @@ class LUIS:
         }
 
         self.parameters = {
-            "projectName": "openaibotV3",
+            "projectName": "openaibot-otheraccount",
             "verbose": True,
-            "deploymentName": "V7deploy",
+            "deploymentName": "V11deploy",
             "stringIndexType": "TextElement_V8",
         }
 

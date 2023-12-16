@@ -1,23 +1,29 @@
 from authetication.notification import EmailSender
 
+
+# In case of real projects, review architecture and implement database logic (CosmosDb Azure or PostgresSql)
+
 class Backend:
-    def __init__(self):
+    def __init__(self, register):
         self.user_data = {}
         self.auto_increment_id = 1
-        self.email_sender = EmailSender()# Adicione uma variável para rastrear o ID autoincrementado.
+        self.register = register
+        self.email_sender = EmailSender()
 
     def register_user(self, nome, email):
         user_id = self.auto_increment_id
-        self.auto_increment_id += 1  # Incrementa o ID para o próximo usuário.
+        self.auto_increment_id += 1  
 
         if user_id not in self.user_data:
             self.user_data[user_id] = {'nome': nome, 'email': email}
             print(f"Usuário {nome} registrado com sucesso! ID: {user_id}")
             self.email_sender.send_registration_email(email)
+            self.login.introduction()
         else:
             print("Usuário já registrado.")
-
-        return user_id  # Retorna o ID do usuário registrado.
-
-    def get_user_data(self, user_id):
-        return self.user_data.get(user_id, None)
+            self.register.name_input()
+            
+        return user_id  
+    
+    def get_user_data(self, email):
+        return self.user_data.get(email, None)
