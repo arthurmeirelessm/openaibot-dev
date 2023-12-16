@@ -8,7 +8,7 @@ class Finalization:
         self.sentiment = SentimentAnalyzer()
         
     def introduction(self):
-        print("Bot: Deseja finalizar?\n1 - Sim\n2 - Não, voltar a opção inicial\n")
+        print("\nBot: Deseja finalizar?\n\033[1m1 - Sim\n2 - Não, voltar a opção inicial\033[0m\n")
         user_input = input("You: ")
         print("\n")
         if re.search(r'\b(sim|claro|quero|1)\b', user_input, flags=re.IGNORECASE):

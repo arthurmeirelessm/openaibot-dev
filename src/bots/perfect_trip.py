@@ -3,6 +3,7 @@ from luis.luis_client import LUIS
 from speech.client import Speech
 from bots.finalization import Finalization
 from openAI.client import GPT3ChatClient
+from bots.error_messages import ErrorMessages
 import re
 
 
@@ -11,6 +12,7 @@ class PerfectTrip:
         self.luis = LUIS()
         self.speech = Speech()
         self.finalization = Finalization(travel_assistant)
+        self.error = ErrorMessages(self.finalization, self)
         self.openAI = GPT3ChatClient()
 
     def introduction(self):
@@ -18,7 +20,7 @@ class PerfectTrip:
         self.introduction_response()
         
     def introduction_response(self):
-        print("- Atividades de aventura\n- Culinária exclusiva\n- Belezas naturais\n- Atrações culturais\n- Festas\n")
+        print("- \033[1mAtividades de aventura\n- Culinária exclusiva\n- Belezas naturais\n- Atrações culturais\n- Festas\033[0m\n")
         user_input = input("You: ")
         self.verify_entities(user_input)
         
@@ -27,6 +29,8 @@ class PerfectTrip:
         time.sleep(3)
 
         user_input = self.speech.TranscribeCommand()
+        
+        self.error.count_empty_input(user_input)
         
         luis_intent = self.luis.analyze_language(user_input)
         
@@ -37,18 +41,12 @@ class PerfectTrip:
             "perfecttrip": lambda: self.explore_culture(final_input),
         }
         top_intent = luis_intent['topIntent']
-        intent_actions.get(top_intent, self.handle_unrecognized_intent)()
+        intent_actions.get(top_intent, self.error.handle_unrecognized_intent)()
         self.ask_more_questions(top_intent)
     
     
     def explore_culture(self, user_input):
         self.openAI.generate_response(user_input)
-
-    def handle_unrecognized_intent(self):
-        print(
-            "Bot: Desculpe, não consegui identificar sua intenção. 🫤\nMe pergunte ou me conte uma curiosidade de algum lugar do mundo."
-        )
-        self.call_speech()
         
     def intro_adventure_activities(self):
         print("Bot: Deseja se aventurar pelo mundo a fora!? Vem comigo.\nPeça sugestão de lugares que tenha os tipos de atividades radicais do seu interesse.\nExemplo: Qual é o melhor país para quem quer se aventurar em trilhas de 4x4 e off-road?\n")

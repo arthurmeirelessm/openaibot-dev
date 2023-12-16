@@ -16,8 +16,8 @@ class TravelAssistant:
     def start_conversation(self):
         greeting = self.get_greeting()
         print(
-            f"Bot: {greeting}! Bem-vindo a ViajeBem Destinos, seu assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n- Cadastro\n- Login\n- Sua viagem perfeita\n- Desbravar o mundo\n"
-        )
+            f"Bot: {greeting}! Bem-vindo a \033[1mAeroQuest Navigator\033[0m, meu nome é Aria e sou sua assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n\n- \033[1mCadastro\n- Login\n- Sua viagem perfeita\n- Desbravar o mundo\033[0m\n"
+            )
         user_input = input("You: ")
         print("\n")
         self.start_conversation_response_option(user_input)

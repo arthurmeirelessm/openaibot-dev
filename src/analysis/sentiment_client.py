@@ -19,6 +19,7 @@ class SentimentAnalyzer:
     def analyze_sentiment(self, documents):
         try:
             sentiment_analysis = self.ai_client.analyze_sentiment(documents)
+            return sentiment_analysis[0].sentiment
             
         except Exception as ex:
             print(ex)

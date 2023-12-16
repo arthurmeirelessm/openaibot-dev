@@ -23,7 +23,7 @@ class LUIS:
         self.parameters = {
             "projectName": "openaibotV3",
             "verbose": True,
-            "deploymentName": "V5deploy",
+            "deploymentName": "V6deploy",
             "stringIndexType": "TextElement_V8",
         }
 
@@ -65,7 +65,7 @@ class LUIS:
             else:
                 self.logger.error(f"Falha: {response.status_code}")
                 self.logger.error(response.json())
-                return None
+                return 'None'
 
         except requests.RequestException as e:
             self.logger.error(f"Falha na requisição: {e}")

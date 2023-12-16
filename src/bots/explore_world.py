@@ -4,6 +4,7 @@ from luis.luis_client import LUIS
 from openAI.client import GPT3ChatClient
 from speech.client import Speech
 from bots.finalization import Finalization
+from bots.error_messages import ErrorMessages
 import re
 
 
@@ -13,6 +14,8 @@ class Explore_world:
         self.openAI = GPT3ChatClient()
         self.speech = Speech()
         self.finalization = Finalization(travel_assistant)
+        self.error = ErrorMessages(self.finalization, self)
+        self.unrecognized_intent_count = 0
 
     def introduction(self):
         print(
@@ -24,30 +27,28 @@ class Explore_world:
         time.sleep(3)
 
         user_input = self.speech.TranscribeCommand()
-                
+        
+        self.error.count_empty_input(user_input)
+                            
         luis_intent = self.luis.analyze_language(user_input)
         
         final_input = f"Forneça uma resposta direta e em poucas linhas para essa pergunta: {user_input}"
 
         intent_actions = {
             "gotoout": self.finalization.introduction,
+            "back": self.travel_assistant.start_conversation(),
             "exploretheworld": lambda: self.explore_culture(final_input),
         }
-        intent_actions.get(luis_intent['topIntent'], self.handle_unrecognized_intent)()
-        self.ask_more_questions(luis_intent)
-
-    def handle_unrecognized_intent(self):
-        print(
-            "Desculpe, não consegui identificar sua intenção. 🫤\nMe pergunte ou me conte uma curiosidade de algum lugar do mundo."
-        )
-        self.call_speech()
+        top_intent = luis_intent['topIntent']
+        intent_actions.get(top_intent, self.error.handle_unrecognized_intent)()
+        self.ask_more_questions(top_intent)
 
     def explore_culture(self, user_input):
         self.openAI.generate_response(user_input)
 
     def ask_more_questions(self, luis_intent):
         if luis_intent == "exploretheworld":
-            print("\nBot: Deseja fazer outra pergunta?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial\n")
+            print("\nBot: Deseja fazer outra pergunta?\n\033[1m1 - Sim\n2 - Não\n3 - Voltar a opção inicial\033[0m\n")
             user_input = input("You: ")
             if re.search(r"\b(sim|claro|quero|1)\b", user_input, flags=re.IGNORECASE):
                 self.call_speech()
@@ -55,3 +56,5 @@ class Explore_world:
                 self.finalization.introduction()
             else:
                 self.finalization.travelAssistant.start_conversation()
+                
+            

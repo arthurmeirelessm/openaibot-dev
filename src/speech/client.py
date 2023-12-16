@@ -23,7 +23,7 @@ class Speech:
         if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
             command = speech.text
         elif speech.reason == speech_sdk.ResultReason.Canceled:
-            command = None
+            command = 'None'
             print(command)
         return command
 
