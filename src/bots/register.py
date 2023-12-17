@@ -28,7 +28,7 @@ class Register:
         luis_intent_email = self.luis.analyze_language(email)
         
         if luis_intent_email["topIntent"] == "user_register" and luis_intent_email["categories"] == "email":
-            self.purchase_flow.introduction()
+            self.purchase_flow.introduction(email)
         else:
             self.email_not_recognized(name)
 

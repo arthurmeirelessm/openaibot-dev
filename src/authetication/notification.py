@@ -41,6 +41,7 @@ class EmailSender:
         
     
     def send_purchase_details(self, user_email):
+        print("cheguei em send email")
         corpo_email = """
         Agradecemos por escolher a AeroQuest Navigator para sua próxima viagem! Estamos empolgados em tê-lo(a) a bordo e queremos garantir que sua experiência seja incrível do início ao fim.
         """
