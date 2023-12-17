@@ -3,7 +3,9 @@
 <br> 
 
 <div align="center">
-<img src="https://github.com/arthurmeirelessm/openaibot-dev/issues/1#issue-2045422664"
+
+![openaibot architecture](https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/cdb56471-7d47-41c4-80e9-52a5c0ffffd1)
+
 " />
 </div>
 
