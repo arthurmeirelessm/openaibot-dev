@@ -3,7 +3,7 @@
 <br> 
 
 <div align="center">
-<img src="https://github.com/arthurmeirelessm/weareables-aws-architecture/assets/78212769/7b949dd0-2fc3-40f8-9434-8ee1c311c3ac"
+<img src="https://github.com/arthurmeirelessm/openaibot-dev/issues/1#issue-2045422664"
 " />
 </div>
 
