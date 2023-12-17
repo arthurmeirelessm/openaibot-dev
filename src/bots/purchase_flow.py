@@ -73,10 +73,7 @@ class PurchaseFlow:
         print(top_intent)
         action = intent_mapping.get(top_intent, None)
         if action:
-            if top_intent == 'gotoout':
-                return action()
-            else:
-                return action
+            return action()
         
     def handle_unrecognized_intent(self):
         print("\nBot: Desculpe, não consegui identificar sua intenção. 🫤")
