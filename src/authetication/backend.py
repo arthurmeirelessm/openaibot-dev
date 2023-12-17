@@ -1,29 +1,41 @@
+# authetication/backend.py
 from authetication.notification import EmailSender
 
-
-# In case of real projects, review architecture and implement database logic (CosmosDb Azure or PostgresSql)
-
 class Backend:
-    def __init__(self, register):
-        self.user_data = {}
-        self.auto_increment_id = 1
-        self.register = register
+    user_data = {}
+    auto_increment_id = 1
+
+    def __init__(self):
         self.email_sender = EmailSender()
+        
 
     def register_user(self, nome, email):
-        user_id = self.auto_increment_id
-        self.auto_increment_id += 1  
+        from bots.login import Login
+        from bots.register import Register
 
-        if user_id not in self.user_data:
-            self.user_data[user_id] = {'nome': nome, 'email': email}
-            print(f"Usuário {nome} registrado com sucesso! ID: {user_id}")
-            self.email_sender.send_registration_email(email)
-            self.login.introduction()
+        login = Login(self)
+        register = Register(self)
+
+        user_id = Backend.auto_increment_id
+        Backend.auto_increment_id += 1  
+
+        if user_id not in Backend.user_data:
+            Backend.user_data[user_id] = {'nome': nome, 'email': email}
+            print("Cadastro feito com sucesso! ✅\nVou redirecionar você para a seção de login.")
+            #self.email_sender.send_registration_email(email)
+            login.introduction()
+            return login  # Retorne a instância de Login
         else:
             print("Usuário já registrado.")
-            self.register.name_input()
-            
-        return user_id  
-    
-    def get_user_data(self, email):
-        return self.user_data.get(email, None)
+            register.name_input()
+
+    @classmethod
+    def get_user_data(cls, email):
+        user_data_match = {user_id: data for user_id, data in cls.user_data.items() if data['email'] == email}
+        
+        if user_data_match:
+            print(user_data_match)
+            return True
+        else:
+            False
+

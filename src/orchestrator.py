@@ -11,7 +11,7 @@ from authetication.backend import Backend
 class TravelAssistant:
     def __init__(self):
         self.finalization = Finalization(self)
-
+        
     def display_bot_response(self, response):
         print(f"Bot: {response}\n")
 
@@ -23,16 +23,11 @@ class TravelAssistant:
         user_input = input("You: ")
         print("\n")
         self.start_conversation_response_option(user_input)
-
+        
     def get_greeting(self):
         current_hour = datetime.now().hour
+        return "Bom dia" if 6 <= current_hour < 12 else "Boa tarde" if 12 <= current_hour < 18 else "Boa noite"
 
-        if 6 <= current_hour < 12:
-            return "Bom dia"
-        elif 12 <= current_hour < 18:
-            return "Boa tarde"
-        else:
-            return "Boa noite"
 
     def start_conversation_response_option(self, option):
         analysis_result = LUIS().analyze_language(text=option)

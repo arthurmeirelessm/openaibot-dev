@@ -4,7 +4,7 @@ from authetication.backend import Backend
 class Register:
     def __init__(self, travel_assistant):
         self.travel_assistant = travel_assistant
-        self.backend = Backend(self)
+        self.backend = Backend()
         self.luis = LUIS()
         
     def introduction(self):
@@ -22,6 +22,7 @@ class Register:
     
     def email_input(self, name):
         email = input("Digite seu e-mail: ")
+        print("\n")
         luis_intent_email = self.luis.analyze_language(email)
         
         if luis_intent_email["topIntent"] == "user_register" and luis_intent_email["categories"] == "email":
@@ -30,9 +31,9 @@ class Register:
             self.email_not_recognized(name)
 
     def name_not_recognized(self):
-        print("Desculpe, o formato do nome inserido não é reconhecido. Por favor, insira um nome válido.")
+        print("Desculpe, o formato do nome inserido não é reconhecido. Por favor, insira um nome válido. 😓\n")
         self.name_input()
 
     def email_not_recognized(self, name):
-        print("Desculpe, o formato do e-mail inserido não é reconhecido. Por favor, insira um e-mail válido.")
+        print("Desculpe, o formato do e-mail inserido não é reconhecido. Por favor, insira um e-mail válido. 😓\n")
         self.email_input(name)
