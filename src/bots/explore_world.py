@@ -45,7 +45,7 @@ class Explore_world:
         self.ask_more_questions(top_intent)
 
     def explore_culture(self, user_input):
-        self.openAI.generate_response(user_input)
+        self.openAI.generate_response_speech(user_input)
 
     def ask_more_questions(self, luis_intent):
         if luis_intent == "exploretheworld":

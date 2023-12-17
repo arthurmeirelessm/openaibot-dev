@@ -38,3 +38,13 @@ class EmailSender:
 
         msg = self.get_msg_object(user_email, title, corpo_email)
         self.send_email(msg)
+        
+    
+    def send_purchase_details(self, user_email):
+        corpo_email = """
+        Agradecemos por escolher a AeroQuest Navigator para sua próxima viagem! Estamos empolgados em tê-lo(a) a bordo e queremos garantir que sua experiência seja incrível do início ao fim.
+        """
+        title = "Confirmação de Compra - Detalhes da Sua Viagem"
+
+        msg = self.get_msg_object(user_email, title, corpo_email)
+        self.send_email(msg)

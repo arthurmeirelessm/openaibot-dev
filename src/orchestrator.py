@@ -6,11 +6,13 @@ from bots.login import Login
 from bots.register import Register
 from bots.perfect_trip import PerfectTrip
 from authetication.backend import Backend
-
+from bots.purchase_flow import PurchaseFlow
+import config
 
 class TravelAssistant:
     def __init__(self):
         self.finalization = Finalization(self)
+        self.purchase_flow = PurchaseFlow(self)
         
     def display_bot_response(self, response):
         print(f"Bot: {response}\n")
@@ -18,7 +20,7 @@ class TravelAssistant:
     def start_conversation(self):
         greeting = self.get_greeting()
         print(
-            f"\nBot: {greeting}! Bem-vindo a \033[1mAeroQuest Navigator\033[0m, meu nome é Aria e sou sua assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n\n- \033[1mCadastro\n- Login\n- Sua viagem perfeita\n- Desbravar o mundo\033[0m\n"
+            f"\nBot: {greeting}! Bem-vindo a \033[1mAeroQuest Navigator\033[0m, meu nome é Aria e sou sua assistente de viagens. Como posso ajudá-lo hoje? 🫡 ✈️\n\n- \033[1mCadastro\n- Sua viagem perfeita\n- Desbravar o mundo\033[0m\n"
             )
         user_input = input("You: ")
         print("\n")
@@ -41,7 +43,6 @@ class TravelAssistant:
     def get_bot_instance(self, analysis_result):
         bots = {
             "exploretheworld": Explore_world(self),
-            "login": Login(self),
             "register": Register(self),
             "perfecttrip": PerfectTrip(self),
             "gotoout": Finalization(self),

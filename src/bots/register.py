@@ -1,10 +1,12 @@
 from luis.luis_client import LUIS
 from authetication.backend import Backend
+from bots.purchase_flow import PurchaseFlow
 
 class Register:
     def __init__(self, travel_assistant):
         self.travel_assistant = travel_assistant
         self.backend = Backend()
+        self.purchase_flow = PurchaseFlow(travel_assistant)
         self.luis = LUIS()
         
     def introduction(self):
@@ -26,7 +28,7 @@ class Register:
         luis_intent_email = self.luis.analyze_language(email)
         
         if luis_intent_email["topIntent"] == "user_register" and luis_intent_email["categories"] == "email":
-            self.backend.register_user(name, email)
+            self.purchase_flow.introduction()
         else:
             self.email_not_recognized(name)
 

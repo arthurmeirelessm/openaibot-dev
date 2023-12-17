@@ -8,7 +8,6 @@ class Backend:
     def __init__(self):
         self.email_sender = EmailSender()
         
-
     def register_user(self, nome, email):
         from bots.login import Login
         from bots.register import Register
@@ -22,9 +21,9 @@ class Backend:
         if user_id not in Backend.user_data:
             Backend.user_data[user_id] = {'nome': nome, 'email': email}
             print("Cadastro feito com sucesso! ✅\nVou redirecionar você para a seção de login.")
-            #self.email_sender.send_registration_email(email)
+            # self.email_sender.send_registration_email(email)
             login.introduction()
-            return login  # Retorne a instância de Login
+            return login  
         else:
             print("Usuário já registrado.")
             register.name_input()

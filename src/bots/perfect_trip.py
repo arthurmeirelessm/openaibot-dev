@@ -49,7 +49,7 @@ class PerfectTrip:
     
     
     def explore_culture(self, user_input):
-        self.openAI.generate_response(user_input)
+        self.openAI.generate_response_speech(user_input)
         
     def intro_adventure_activities(self):
         print("Bot: \033[1mDeseja se aventurar pelo mundo a fora!? Vem comigo.\033[0m🪂🚵\n\nPeça sugestão de lugares que tenha os tipos de atividades radicais do seu interesse.\n\033[1mExemplo: Qual é o melhor país para quem quer se aventurar em trilhas de 4x4 e off-road?\033[0m\n")
