@@ -19,49 +19,49 @@
 Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. Nesse âmbito, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure, a poderosa OpenAI e recursos de visão computacional (OCR) externos para alcançar um chatbot robusto e inteligente em Python.
 
 
-Microsoft Azure - LUIS (Language Understanding Intelligent Service):
+**Microsoft Azure - LUIS (Language Understanding Intelligent Service)**:
 
 O LUIS capacita o chatbot a compreender e interpretar comandos e intenções dos usuários, proporcionando uma análise profunda da linguagem natural.
 
 Melhora na compreensão de perguntas complexas.
 Fornecimento de respostas mais precisas.
 
-Microsoft Azure - Text Analytics:
+**Microsoft Azure - Text Analytics**:
 
 O Text Analytics realiza análise de sentimento em avaliações e interações dos usuários, proporcionando insights valiosos sobre a satisfação do usuário.
 
 Permite ajustes contínuos para melhorar a experiência geral.
 Oferece uma compreensão mais profunda das emoções dos usuários.
 
-Microsoft Azure - Azure Speech-to-Text:
+**Microsoft Azure - Azure Speech-to-Text**:
 
 O Azure Speech-to-Text permite a transcrição precisa da entrada de voz dos usuários, convertendo-a em texto para processamento pelo chatbot.
 
 Amplia as opções de interação, permitindo aos usuários fornecerem comandos por voz.
 Facilita a entrada de dados sem depender apenas de texto.
 
-Microsoft Azure - Text-to-Speech:
+**Microsoft Azure - Text-to-Speech**:
 
 O Text-to-Speech converte as respostas do chatbot em fala, proporcionando uma experiência mais dinâmica e envolvente para os usuários.
 
 Torna as interações mais naturais ao oferecer respostas audíveis.
 Enriquece a experiência do usuário com feedback de áudio.
-OpenAI - GPT-3 e ChatBot Inteligente:
+
+**OpenAI - GPT-3 e ChatBot Inteligente:**
 
 A API GPT-3 da OpenAI proporciona ao chatbot capacidades avançadas de processamento de linguagem natural, gerando respostas mais contextuais e dinâmicas.
 
 Maior inteligência na interação com o usuário.
 Respostas mais naturalmente contextualizadas.
 
-
-Computer Vision com OCR (Optical Character Recognition) - PyPDF2:
+**Computer Vision com OCR (Optical Character Recognition) - PyPDF2**:
 
 OCR com PyPDF2 extrai texto de PDFs, aprimorando a inteligência do chatbot ao lidar com consultas em bases de conhecimento presentes em documentos PDF.
 
 Enriquece a capacidade do chatbot de extrair informações de documentos.
 Aprimora a busca em bases de conhecimento.
 
-Envio de Mensagens (Notificações pro-ativas com smtplib:
+**Envio de Mensagens (Notificações pro-ativas com smtplib**:
 
 O uso do smtplib permite ao chatbot enviar e-mails, promovendo uma comunicação eficaz e transparente com os usuários.
 
