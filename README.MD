@@ -218,4 +218,17 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <p>Essa abordagem proporciona uma interação mais natural e imersiva, permitindo aos usuários fazerem perguntas oralmente e receberem respostas de alta qualidade com uma voz neural autêntica e envolvente.</p>
 
+<h2>Uso do Text Analytics em Avaliações de FAQ - Finalization:</h2>
+
+<p>A classe Finalization é responsável por avaliar as avaliações dos usuários sobre o serviço de assistência da área.</p>
+<p>O Text Analytics é empregado nesse contexto para realizar análise de sentimento nas avaliações e interações dos usuários.</p>
+<p>Essa análise proporciona insights valiosos sobre a satisfação do usuário em relação ao serviço oferecido.</p>
+<ul>
+  <li>Permite ajustes contínuos para melhorar a experiência geral dos usuários.</li>
+  <li>Oferece uma compreensão mais profunda das emoções expressas pelos usuários.</li>
+</ul>
+
+<p>Essa integração do Text Analytics na classe Finalization contribui para uma abordagem proativa na melhoria contínua do serviço, com base no feedback e nas emoções expressas pelos usuários.</p>
+
+
 
