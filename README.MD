@@ -13,6 +13,9 @@
 
 <br> 
 
+**Quais recursos foram utilizados na solução e qual foi a razão pela qual foram escolhidos?**
+
+Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. Nesse âmbito, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure, a poderosa OpenAI e recursos de visão computacional (OCR) externos para alcançar um chatbot robusto e inteligente em Python.
 
 <h3>Microsoft Azure - LUIS (Language Understanding Intelligent Service):</h3>
 <p>O LUIS capacita o chatbot a compreender e interpretar comandos e intenções dos usuários, proporcionando uma análise profunda da linguagem natural.</p>
