@@ -158,10 +158,42 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <img width="959" alt="luis" src="https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/37cf536f-21d6-4da5-8e02-c80898e1b0c8">
 
-<h3>2 - </h3>
+<h3>2 - Design e estrutura</h3>
 <p>A estrutua do bot consiste em Arquitetura de Bot Modular e também de cascata, que é usuado em formulários e perguntas consequentes. O bot contém uma classe orquestradora que divide os modulos de entrada do usuário e redirecionam pra classe reconhecida pelo LUIS correlacionada: </p>
 
 <img width="588" alt="menuprincipal" src="https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/ecf0f876-1e08-4b90-a216-21079dc0811e">
 
 <p> Sendo assim, o usuário entra -> Dá o input -> LUIS reconhece e manda pras classes/bots correlacionados a Cadastro, Sua viagem perfeita, Desbravar o mundo.</p>
+
+
+<h3>3 - Bot de cascata Purchase</h3>
+
+<p>No ChatBot, a opção "Cadastro" aciona o bot de registro, um módulo cuidadosamente correlacionado por meio do Language Understanding Intelligent Service (LUIS). Aqui está uma explicação do fluxo de interações:</p>
+
+<strong>Bot de Registro (LUIS - Register_User):</strong>
+<ul>
+  <li>O usuário escolhe a opção "Cadastro" no menu principal.</li>
+  <li>O LUIS identifica a intenção "Register_User", encaminhando o usuário para o bot de registro.</li>
+  <li>O bot de registro coleta informações como nome e e-mail do usuário, garantindo uma interação personalizada.</li>
+  <li>Com base nas informações fornecidas, se bem-sucedido, o usuário é redirecionado para o próximo estágio.</li>
+</ul>
+
+<strong>Bot de Compra (PurchaseBot):</strong>
+<ul>
+  <li>O usuário, após o registro bem-sucedido, é encaminhado para o bot de compra.</li>
+  <li>O bot de compra pergunta ao usuário sobre o destino desejado para a viagem.</li>
+  <li>Em seguida, utiliza visão computacional OCR no arquivo PDF "tickets" para extrair informações de passagens disponíveis.</li>
+  <li>Esses dados são integrados ao GPT para fornecer uma resposta contextualizada e inteligente ao usuário.</li>
+  <li>O usuário tem a opção de realizar outra compra ou finalizar a interação.</li>
+</ul>
+
+<strong>Bot de FAQ (FAQBot):</strong>
+<ul>
+  <li>Caso o usuário opte por finalizar, é redirecionado para o bot de FAQ.</li>
+  <li>O bot de FAQ avalia os comentários do usuário sobre o serviço de assistência da área.</li>
+  <li>Proporciona respostas informativas e soluciona dúvidas frequentes.</li>
+</ul>
+
+<p>Esse fluxo estruturado garante uma experiência de usuário contínua, oferecendo desde o registro até a avaliação de serviços, tudo dentro de um ambiente amigável e eficiente.</p>
+
 
