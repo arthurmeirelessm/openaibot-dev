@@ -106,6 +106,8 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
   <li>Comunicação assíncrona eficiente.</li>
 </ul>
 
+<hr>
+
 <h3>Serviços ou recursos que eu adotaria pra integrar com essa solução em um cenário real:</h3>
 <ul>
   <li>Azure CosmosDB: Perfeito para armazenamento de contexto e informações do usuário, sem falar que é uma integração extremamente viável, tendo em vista que tudo já é ambiente Microsoft Azure</li>
