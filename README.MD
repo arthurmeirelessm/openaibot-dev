@@ -128,41 +128,34 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <p>OBS: A numeração a baixo é referente a numeração da arquitetura.</p>
 
-<h3>Uso do LUIS na Navegação Principal do ChatBot:</h3>
+<h2>Uso do LUIS na Navegação Principal do ChatBot:</h2>
 
 <p>No menu principal do seu ChatBot, o Language Understanding Intelligent Service (LUIS) desempenha um papel crucial no reconhecimento de intenções, permitindo uma interação mais inteligente e direcionada com os usuários. Eis como o LUIS é aplicado nesse contexto:</p>
 
-<ol>
-  <li>
-    <strong>Reconhecimento de Entrada:</strong>
-    <ul>
-      <li>O LUIS é configurado para analisar a entrada do usuário no menu principal, identificando a intenção subjacente por meio de técnicas avançadas de processamento de linguagem natural.</li>
-    </ul>
-  </li>
+<strong>Reconhecimento de Entrada:</strong>
+<ul>
+  <li>O LUIS é configurado para analisar a entrada do usuário no menu principal, identificando a intenção subjacente por meio de técnicas avançadas de processamento de linguagem natural.</li>
+</ul>
 
-  <li>
-    <strong>Redirecionamento para Bots/Classes Correlacionados:</strong>
-    <ul>
-      <li>Com base na intenção identificada, o LUIS orienta o ChatBot a redirecionar o usuário para a classe ou módulo específico correspondente à sua intenção, personalizando a experiência do usuário.</li>
-    </ul>
-  </li>
+<strong>Redirecionamento para Bots/Classes Correlacionados:</strong>
+<ul>
+  <li>Com base na intenção identificada, o LUIS orienta o ChatBot a redirecionar o usuário para a classe ou módulo específico correspondente à sua intenção, personalizando a experiência do usuário.</li>
+</ul>
 
-  <li>
-    <strong>Explicação Básica de Intenções:</strong>
-    <ul>
-      <li><strong>Back:</strong> Permite o retorno a opções anteriores, facilitando a navegação.</li>
-      <li><strong>ExploreTheWorld:</strong> Oferece informações e curiosidades sobre destinos, incentivando a exploração.</li>
-      <li><strong>GotoOut:</strong> Indica a intenção de sair do bot ou finalizar a interação.</li>
-      <li><strong>Login:</strong> Facilita o acesso seguro à conta do usuário.</li>
-      <li><strong>None:</strong> Intenção padrão acionada quando não é possível reconhecer nenhuma intenção específica.</li>
-      <li><strong>PerfectTrip:</strong> Antecede e conduz o usuário para curiosidades específicas de destinos de viagem.</li>
-      <li><strong>Register:</strong> Direciona os usuários para o processo de cadastro no bot.</li>
-      <li><strong>User_Register:</strong> Específica para a coleta de informações pessoais como nome e e-mail durante o registro.</li>
-    </ul>
-  </li>
-</ol>
+<strong>Explicação Básica de Intenções:</strong>
+<ul>
+  <li><strong>Back:</strong> Permite o retorno a opções anteriores, facilitando a navegação.</li>
+  <li><strong>ExploreTheWorld:</strong> Oferece informações e curiosidades sobre destinos, incentivando a exploração.</li>
+  <li><strong>GotoOut:</strong> Indica a intenção de sair do bot ou finalizar a interação.</li>
+  <li><strong>Login:</strong> Facilita o acesso seguro à conta do usuário.</li>
+  <li><strong>None:</strong> Intenção padrão acionada quando não é possível reconhecer nenhuma intenção específica.</li>
+  <li><strong>PerfectTrip:</strong> Antecede e conduz o usuário para curiosidades específicas de destinos de viagem.</li>
+  <li><strong>Register:</strong> Direciona os usuários para o processo de cadastro no bot.</li>
+  <li><strong>User_Register:</strong> Específica para a coleta de informações pessoais como nome e e-mail durante o registro.</li>
+</ul>
 
 <p>Ao utilizar o LUIS nesse cenário, a experiência do usuário é otimizada, garantindo que suas intenções sejam compreendidas e atendidas de maneira eficiente, resultando em interações mais naturais e personalizadas.</p>
+
 
 
 <h3>2 - </h3>
