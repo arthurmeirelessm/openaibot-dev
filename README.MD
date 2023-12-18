@@ -4,7 +4,8 @@
 
 <div align="center">
 
-![openaibot architecture](https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/cdb56471-7d47-41c4-80e9-52a5c0ffffd1)
+![openai architecture](https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/afc52efd-98e5-4c15-8bf5-279b5916ba61)
+
 
 </div>
 
