@@ -22,15 +22,15 @@ Microsoft Azure - LUIS (Language Understanding Intelligent Service):
 
 O LUIS capacita o chatbot a compreender e interpretar comandos e intenções dos usuários, proporcionando uma análise profunda da linguagem natural.
 Vantagens:
-Melhora na compreensão de perguntas complexas.
-Fornecimento de respostas mais precisas.
+\nMelhora na compreensão de perguntas complexas.
+\nFornecimento de respostas mais precisas.
 
 Microsoft Azure - Text Analytics:
 
 O Text Analytics realiza análise de sentimento em avaliações e interações dos usuários, proporcionando insights valiosos sobre a satisfação do usuário.
 Vantagens:
-Permite ajustes contínuos para melhorar a experiência geral.
-Oferece uma compreensão mais profunda das emoções dos usuários.
+\nPermite ajustes contínuos para melhorar a experiência geral.
+\nOferece uma compreensão mais profunda das emoções dos usuários.
 
 Microsoft Azure - Azure Speech-to-Text:
 
