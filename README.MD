@@ -106,14 +106,6 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
   <li>Comunicação assíncrona eficiente.</li>
 </ul>
 
-<style>
-    .linha-horizontal {
-        border: none;
-        height: 4px; /* Ajuste a altura conforme necessário */
-        background-color: #333; /* Cor da linha */
-        margin: 20px 0; /* Margem superior e inferior para espaçamento */
-    }
-</style>
+***
 
-<hr class="linha-horizontal">
-
+---
