@@ -181,6 +181,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <strong>Bot de Compra (PurchaseBot):</strong>
 <ul>
   <li>O usuário, após o registro bem-sucedido, é encaminhado para o bot de compra.</li>
+  <li>Após compra feita, recebimento de mensagem pro-ativa no email</li>
   <li>O bot de compra pergunta ao usuário sobre o destino desejado para a viagem.</li>
   <li>Em seguida, utiliza visão computacional OCR no arquivo PDF "tickets" para extrair informações de passagens disponíveis.</li>
   <li>Esses dados são integrados ao GPT para fornecer uma resposta contextualizada e inteligente ao usuário.</li>
@@ -197,7 +198,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <p>Esse fluxo estruturado garante uma experiência de usuário contínua, oferecendo desde o registro até a avaliação de serviços, tudo dentro de um ambiente amigável e eficiente.</p>
 
 
-<h3>Uso de Speech-to-Text, processamento de resposta com GPT e resposta com voz neural Text-to-speech</h3>
+<h3>4 - Uso de Speech-to-Text, processamento de resposta com GPT e resposta com voz neural Text-to-speech</h3>
 
 <strong>Bot Perfect_Trip:</strong>
 <ul>
@@ -218,7 +219,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <p>Essa abordagem proporciona uma interação mais natural e imersiva, permitindo aos usuários fazerem perguntas oralmente e receberem respostas de alta qualidade com uma voz neural autêntica e envolvente.</p>
 
-<h2>Uso do Text Analytics em Avaliações de FAQ - Finalization:</h2>
+<h3>5 - Uso do Text Analytics em Avaliações de FAQ - Finalization:</h3>
 
 <p>A classe Finalization é responsável por avaliar as avaliações dos usuários sobre o serviço de assistência da área.</p>
 <p>O Text Analytics é empregado nesse contexto para realizar análise de sentimento nas avaliações e interações dos usuários.</p>
