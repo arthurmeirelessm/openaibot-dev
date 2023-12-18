@@ -264,7 +264,7 @@ ANALYSIS_URI=<seu-endpoint-recurso-language>
 
 # Notificações
 EMAIL_SENDER=arthurmsesjdfdn@gmail.com
-PASSWORD_FOR_THE_EMAIL_I_SAWSENTijbitnzimqzexjhp
+PASSWORD_FOR_THE_EMAIL_I_SAWSENT=ijbitnzimqzexjhp
 SEND=true
 
 
