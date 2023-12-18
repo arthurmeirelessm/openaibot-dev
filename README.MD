@@ -187,7 +187,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
   <li>O usuário tem a opção de realizar outra compra ou finalizar a interação.</li>
 </ul>
 
-<strong>Bot de FAQ (FAQBot):</strong>
+<strong>Bot de FAQ e Finalização:</strong>
 <ul>
   <li>Caso o usuário opte por finalizar, é redirecionado para o bot de FAQ.</li>
   <li>O bot de FAQ avalia os comentários do usuário sobre o serviço de assistência da área.</li>
