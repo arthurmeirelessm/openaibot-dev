@@ -131,6 +131,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <h3>1 - Classes, divisão de responsabilidade e entrada de usuário</h3>
 <p>A estrutua do bot consiste em Arquitetura de Bot Modular e também de cascata, que é usuado em formulários e perguntas consequentes. O bot contém uma classe orquestradora que divide os modulos de entrada do usuário e redirecionam pra classe reconhecida pelo LUIS correlacionada: 
 
+
 <img width="588" alt="menuprincipal" src="https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/ecf0f876-1e08-4b90-a216-21079dc0811e">
 
 </p>
