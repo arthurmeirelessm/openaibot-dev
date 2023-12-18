@@ -236,6 +236,10 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <h2 style="font-size: 24px; font-weight: bold;">Testes locais</h2>
 
+<h3>luis_client.py</h3>
+
+<p>Alterar a propriedades "projectName" pro nome do projeto correto e alterar "deploymentName" da versão do deploy correto no LUIS</p>
+
 <h3>.Env</h3>
 
 <p>Para um teste mais interessante com notificações, utilize seu email pessoal para teste na etapa de cadastro.</p>
@@ -269,3 +273,5 @@ SEND=true
 
 
 ```
+
+
