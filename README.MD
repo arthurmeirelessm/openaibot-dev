@@ -116,3 +116,9 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
     Esta é outra linha de texto.
 </p>
 
+<p>
+    Este é um parágrafo com uma quebra de linha maior.
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    Este é outro parágrafo.
+</p>
+
