@@ -197,3 +197,25 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <p>Esse fluxo estruturado garante uma experiência de usuário contínua, oferecendo desde o registro até a avaliação de serviços, tudo dentro de um ambiente amigável e eficiente.</p>
 
 
+<h3>Uso de Speech-to-Text, processamento de resposta com GPT e resposta com voz neural Text-to-speech</h3>
+
+<strong>Bot Perfect_Trip:</strong>
+<ul>
+  <li>O bot Perfect_Trip é especializado em responder perguntas e fornecer sugestões sobre destinos de viagem.</li>
+  <li>Os usuários podem fazer perguntas sobre festas, culinária e outros parâmetros relacionados à experiência de viagem.</li>
+  <li>Speech-to-Text é utilizado para transcrever as perguntas dos usuários feitas oralmente.</li>
+  <li>As perguntas transcritas são integradas ao GPT para gerar respostas inteligentes e personalizadas.</li>
+  <li>A resposta final é convertida em fala através do Text-to-Speech, utilizando a voz neural pt-BR-YaraNeural.</li>
+</ul>
+
+<strong>Bot ExploreWorld:</strong>
+<ul>
+  <li>O bot ExploreWorld lida com perguntas de usuários sobre curiosidades gerais e peculiaridades de destinos, países e lugares.</li>
+  <li>Speech-to-Text é empregado para transcrever as perguntas orais dos usuários.</li>
+  <li>As perguntas transcritas são enviadas ao GPT para gerar respostas inteligentes e informativas.</li>
+  <li>A resposta final é convertida em fala por meio do Text-to-Speech, utilizando a voz neural pt-BR-YaraNeural.</li>
+</ul>
+
+<p>Essa abordagem proporciona uma interação mais natural e imersiva, permitindo aos usuários fazerem perguntas oralmente e receberem respostas de alta qualidade com uma voz neural autêntica e envolvente.</p>
+
+
