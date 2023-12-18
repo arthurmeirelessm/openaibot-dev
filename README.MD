@@ -232,4 +232,40 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <p>Essa integração do Text Analytics na classe Finalization contribui para uma abordagem proativa na melhoria contínua do serviço, com base no feedback e nas emoções expressas pelos usuários.</p>
 
 
+---
+
+<h2 style="font-size: 24px; font-weight: bold;">Testes locais</h2>
+
+<h3>.Env</h3>
+
+<p>Para um teste mais interessante com notificações, utilize seu email pessoal pra teste na etapa de cadastro.
+OBS: Essas variáveis que já estão com valores em # notificações podem ser utizatidas traquilamente tendo em vista que o email é de teste e a senha é uma senha de app. Senha de app é uma senha gerada pela google somente para testes de api e aplicações, sem vinculo nenhum com a conta de email, ou seja, a senha de conta é outra e essa que está no .env só pode ser usado pra testes e desenvolvimentos</p>
+
+```sh
+# Chaves OpenAI
+OPENAI_API_KEY=<sua-key-gpt>
+
+# LUIS credencials
+SUBSCRIPTION_KEY=<sua-key-luis>
+REQUEST_ID=<sua-key-request>
+PARTICIPANT_ID=PARTICIPANT_ID_HERE
+QUERY_TEXT=3
+LANGUAGE_CODE=pt
+URL=<sua-urlendpoint-prediction>
+
+# Speech
+SPEECH_SUBSCRIPTION_KEY=<sua-key-recurso-speech>
+REGION=<sua-region-recurso-speech>
+
+# Text analytics
+ANALYSIS_SUBSCRIPTION_KEY=<sua-key-recurso-language>
+ANALYSIS_URI=<seu-endpoint-recurso-language>
+
+# Notificações
+EMAIL_SENDER=arthurmsesjdfdn@gmail.com
+PASSWORD_FOR_THE_EMAIL_I_SAWSENTijbitnzimqzexjhp
+SEND=true
+
+
+```
 
