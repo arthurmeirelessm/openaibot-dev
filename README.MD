@@ -13,7 +13,31 @@
 
 <br> 
 
-This is a solution that I have designed, predominantly employing AWS serverless services. It encompasses the utilization of external wearable SDKs from renowned brands such as Apple, Huawei, and Xiaomi, which are eminent in the realm of smartwatches and wristbands. In a healthcare-oriented context, this architecture is fundamentally segmented into thirteen distinct phases, collectively shaping the comprehensive scope of its capabilities. Three of these phases concentrate on diverse output avenues, comprising APIs, dashboards, and even predictive models generated through machine learning-driven recommendations.
+
+Introdução Técnica ao Chatbot Integrado: Tecnologias e Soluções Avançadas
+
+Desenvolver um chatbot eficiente e inteligente requer a aplicação de diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. No âmbito deste projeto, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure e a poderosa OpenAI, para alcançar um chatbot robusto e inteligente em Python.
+
+Microsoft Azure - LUIS e Text Analytics
+LUIS (Language Understanding Intelligent Service):
+O LUIS foi utilizado para capacitar nosso chatbot a compreender e interpretar comandos e intenções dos usuários. A integração do LUIS permite uma análise profunda da linguagem natural, melhorando a capacidade do bot de entender perguntas complexas e fornecer respostas precisas.
+
+Text Analytics para Análise de Sentimento:
+A funcionalidade de Text Analytics foi utilizada para realizar uma análise de sentimento em avaliações e interações dos usuários. Isso não apenas fornece insights valiosos sobre a satisfação do usuário, mas também permite ajustes contínuos para melhorar a experiência geral.
+
+Azure Speech-to-Text e Text-to-Speech
+Speech-to-Text:
+Foi utilizada a integração com o Azure Speech-to-Text para habilitar a entrada de voz dos usuários. Isso amplia as opções de interação, permitindo que os usuários forneçam comandos ou façam perguntas utilizando a fala.
+
+Text-to-Speech:
+O Text-to-Speech foi empregado para tornar as respostas do chatbot mais dinâmicas, proporcionando uma experiência de usuário mais rica e envolvente.
+
+OpenAI - GPT-3 e ChatBot Inteligente
+OpenAI GPT-3:
+Utilizando a API GPT-3 da OpenAI, nosso chatbot se beneficia de uma poderosa capacidade de processamento de linguagem natural. Isso se traduz em respostas mais contextuais, geradas de forma dinâmica, e uma maior inteligência na interação com o usuário.
+Computer Vision com OCR (Optical Character Recognition)
+OCR com PyPDF2:
+Foi utilizado um modelo de Computer Vision baseado na biblioteca PyPDF2 para realizar a extração de texto em PDFs. Essa capacidade é integrada ao fluxo do chatbot, melhorando a inteligência ao lidar com consultas em bases de conhecimento presentes nos documentos PDF.
 
 <br> 
 
