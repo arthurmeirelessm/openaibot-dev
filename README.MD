@@ -106,6 +106,8 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
   <li>Comunicação assíncrona eficiente.</li>
 </ul>
 
-***
 
 ---
+
+
+<h2 style="font-size: 24px; font-weight: bold;">Recursos detalhados detalhados e arquitetura</h2>
