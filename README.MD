@@ -1,4 +1,4 @@
-# openaibot - Doc 
+# Solução openaibot - OpenAI (gpt) com Serviços de IA da Azure 
 
 <br> 
 
