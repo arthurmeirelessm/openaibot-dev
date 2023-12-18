@@ -134,4 +134,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <img width="588" alt="menuprincipal" src="https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/ecf0f876-1e08-4b90-a216-21079dc0811e">
 
-</p>
+<p> Sendo assim, o usuário entra -> Dá o input -> LUIS reconhece e manda pras classes/bots correlacionados a Cadastro, Sua viagem perfeita, Desbravar o mundo.</p>
+
+
+
