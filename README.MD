@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![openai architecture](https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/afc52efd-98e5-4c15-8bf5-279b5916ba61)
+![openaibot drawio (4)](https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/03ed8170-a940-4413-99e2-b5572a53980b)
 
 
 </div>
