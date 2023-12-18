@@ -156,7 +156,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <p>Ao utilizar o LUIS nesse cenário, a experiência do usuário é otimizada, garantindo que suas intenções sejam compreendidas e atendidas de maneira eficiente, resultando em interações mais naturais e personalizadas.</p>
 
-
+<img width="959" alt="luis" src="https://github.com/arthurmeirelessm/openaibot-dev/assets/78212769/37cf536f-21d6-4da5-8e02-c80898e1b0c8">
 
 <h3>2 - </h3>
 <p>A estrutua do bot consiste em Arquitetura de Bot Modular e também de cascata, que é usuado em formulários e perguntas consequentes. O bot contém uma classe orquestradora que divide os modulos de entrada do usuário e redirecionam pra classe reconhecida pelo LUIS correlacionada: </p>
