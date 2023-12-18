@@ -11,7 +11,7 @@ class Login:
         self.purchase_flow = PurchaseFlow()  
     
     def introduction(self):
-        print("\nDigite seu email cadastrado para fazer login.")
+        print("\nBot: Digite seu email cadastrado para fazer login.")
         user_input = input("You: ")
         verifyemail = self.backend.get_user_data(user_input)
         if verifyemail:

@@ -52,19 +52,19 @@ class PerfectTrip:
         self.openAI.generate_response_speech(user_input)
         
     def intro_adventure_activities(self):
-        print("Bot: \033[1mDeseja se aventurar pelo mundo a fora!? Vem comigo.\033[0m🪂🚵\n\nPeça sugestão de lugares que tenha os tipos de atividades radicais do seu interesse.\n\033[1mExemplo: Qual é o melhor país para quem quer se aventurar em trilhas de 4x4 e off-road?\033[0m\n")
+        print("Bot: \033[1mDeseja se aventurar pelo mundo a fora!? Vem comigo.\033[0m🪂🚵\n\nBot: Peça sugestão de lugares que tenha os tipos de atividades radicais do seu interesse.\n\033[1mExemplo: Qual é o melhor país para quem quer se aventurar em trilhas de 4x4 e off-road?\033[0m\n")
     
     def intro_cooking(self):
-         print("Bot: \033[1mDescubra o sabor único da culinária exclusiva.\033[0m🌮🍝\n\nPeça sugestão de lugares que tenha os tipos de culinárias exclusivas/exóticas do seu interesse.\n\033[1mExemplo: Estou buscando um destino com culinária exótica asiática. Alguma recomendação?\033[0m\n")
+         print("Bot: \033[1mDescubra o sabor único da culinária exclusiva.\033[0m🌮🍝\n\nBot: Peça sugestão de lugares que tenha os tipos de culinárias exclusivas/exóticas do seu interesse.\n\033[1mExemplo: Estou buscando um destino com culinária exótica asiática. Alguma recomendação?\033[0m\n")
     
     def intro_natural_beauty(self):
-         print("Bot: \033[1mExplore a beleza natural deslumbrante.\033[0m🌅⛰️\n\nPeça sugestão de lugares que tenha os tipos de belezas naturais do seu interesse.\n\033[1mExemplo: Pode sugerir um país na América do Sul conhecido por suas paisagens naturais deslumbrantes?\033[0m\n")
+         print("Bot: \033[1mExplore a beleza natural deslumbrante.\033[0m🌅⛰️\n\nBot: Peça sugestão de lugares que tenha os tipos de belezas naturais do seu interesse.\n\033[1mExemplo: Pode sugerir um país na América do Sul conhecido por suas paisagens naturais deslumbrantes?\033[0m\n")
     
     def intro_cultural(self):
-        print("Bot: \033[1mImmerja-se em experiências culturais inesquecíveis.\033[0m🎎🏯\n\nPeça sugestão de lugares que tenha os tipos de atrações culturais do seu interesse.\n\033[1mExemplo: Qual país tem com a cultura indigina mais forte você me daria de sugestão?\033[0m\n")
+        print("Bot: \033[1mImmerja-se em experiências culturais inesquecíveis.\033[0m🎎🏯\n\nBot: Peça sugestão de lugares que tenha os tipos de atrações culturais do seu interesse.\n\033[1mExemplo: Qual país tem com a cultura indigina mais forte você me daria de sugestão?\033[0m\n")
     
     def intro_party(self):
-         print("Bot: \033[1mEntão prentede viajar para curtir, hein!? rs\033[0m🍸🥳\n\nPeça sugestão de lugares que tenha os tipo de festa do seu interesse.\n\033[1mExemplo: Estou buscando um destino com as melhores festas eletrônicas. Alguma recomendação?\033[0m\n")
+         print("Bot: \033[1mEntão prentede viajar para curtir, hein!? rs\033[0m🍸🥳\n\nBot: Peça sugestão de lugares que tenha os tipo de festa do seu interesse.\n\033[1mExemplo: Estou buscando um destino com as melhores festas eletrônicas. Alguma recomendação?\033[0m\n")
     
     
     
@@ -87,7 +87,7 @@ class PerfectTrip:
 
     
     def default_intro(self):
-        print("\nDesculpe, não consegui identificar sua intenção. 🫤\nEscolha uma das opções listadas.\n")
+        print("\nBot: Desculpe, não consegui identificar sua intenção. 🫤\nEscolha uma das opções listadas.\n")
         self.introduction_response()
     
     def ask_more_questions(self, luis_intent):

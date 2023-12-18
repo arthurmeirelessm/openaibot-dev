@@ -19,17 +19,16 @@ class PurchaseFlow:
         self.ocr = PDFTextExtractor(file_path=r"C:\bot-openAI\src\vision\kb", base_file="tickets.pdf")    
         
     def introduction(self, email):
-        print("Cadastro feito com sucesso! ✅\n")
+        print("Bot: Cadastro feito com sucesso! ✅\n")
         self.firt_interation(email)
     
     def firt_interation(self, email):
-        print("Nessa seção você poderá realizar compras de passagens aéreas internacionais.\n")
-        print("Para onde deseja ir?\nIremos listar os próximos destinos disponíveis.\n")
+        print("Bot: Nessa seção você poderá realizar compras de passagens aéreas internacionais.\n")
+        print("Bot: Para onde deseja ir?\nIremos listar os próximos destinos disponíveis.\n")
         user_input = input("You: ")
         self.openai_in_OCR_Integration(user_input, email)
         
     def openai_in_OCR_Integration(self, user_input, email):
-        print(f"Email: {email}")
         if self.verify_intent(user_input) is None:
             read_result = self.ocr.extract_text_from_pdf()
             prompt_optimization = f"Input: {user_input}. Traga informações SOMENTE da cidade, disponibilidade e valor em um formato organizado de texto com tópicos numericos que dão match com a cidade ou país dito em 'input' de acordo com o que tem essa base de conhecimento aqui = {read_result}"

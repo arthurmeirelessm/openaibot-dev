@@ -18,10 +18,10 @@ class ErrorMessages:
 
     def handle_unrecognized_intent(self):
         print(
-            "\nDesculpe, não consegui identificar sua intenção. 🫤\nMe pergunte ou me conte uma curiosidade de algum lugar do mundo."
+            "\nBot: Desculpe, não consegui identificar sua intenção. 🫤\nMe pergunte ou me conte uma curiosidade de algum lugar do mundo."
         )
         self.caller.call_speech()
 
     def deal_with_third_attempt(self):
-        print("\nSua intenção não foi reconhecida pela terceira vez. \nCaso queira \033[1mFINALIZAR\033[0m basta me falar também.")
+        print("\nBot: Sua intenção não foi reconhecida pela terceira vez. \nCaso queira \033[1mFINALIZAR\033[0m basta me falar também.")
         self.caller.call_speech()

@@ -10,11 +10,11 @@ class Register:
         self.luis = LUIS()
         
     def introduction(self):
-        print("Bem-vindo ao meu processo de cadastro! Para começar, preciso coletar alguns dados seus.\n")
+        print("Bot: Bem-vindo ao meu processo de cadastro! Para começar, preciso coletar alguns dados seus.\n")
         self.name_input()
         
     def name_input(self): 
-        name = input("\033[1mDigite seu nome completo:\033[0m ")
+        name = input("\033[1mBot: Digite seu nome completo =>\033[0m ")
         print("\n")
         luis_intent_name = self.luis.analyze_language(name)
         if luis_intent_name["topIntent"] == "user_register" and luis_intent_name["categories"] == "name":
@@ -23,7 +23,7 @@ class Register:
             self.name_not_recognized()
     
     def email_input(self, name):
-        email = input("Digite seu e-mail: ")
+        email = input("\033[1mBot: Digite seu e-mail =>\033[0m ")
         print("\n")
         luis_intent_email = self.luis.analyze_language(email)
         
@@ -33,9 +33,9 @@ class Register:
             self.email_not_recognized(name)
 
     def name_not_recognized(self):
-        print("Desculpe, o formato do nome inserido não é reconhecido. Por favor, insira um nome válido. 😓\n")
+        print("Bot: Desculpe, o formato do nome inserido não é reconhecido. Por favor, insira um nome válido. 😓\n")
         self.name_input()
 
     def email_not_recognized(self, name):
-        print("Desculpe, o formato do e-mail inserido não é reconhecido. Por favor, insira um e-mail válido. 😓\n")
+        print("Bot: Desculpe, o formato do e-mail inserido não é reconhecido. Por favor, insira um e-mail válido. 😓\n")
         self.email_input(name)
