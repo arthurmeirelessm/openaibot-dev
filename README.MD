@@ -18,28 +18,54 @@
 
 Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. Nesse âmbito, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure, a poderosa OpenAI e recursos de visão computacional (OCR) externos para alcançar um chatbot robusto e inteligente em Python.
 
+Microsoft Azure - LUIS (Language Understanding Intelligent Service):
 
-Microsoft Azure - LUIS (Language Understanding Intelligent Service)
+O LUIS capacita o chatbot a compreender e interpretar comandos e intenções dos usuários, proporcionando uma análise profunda da linguagem natural.
+Vantagens:
+Melhora na compreensão de perguntas complexas.
+Fornecimento de respostas mais precisas.
 
-O uso do LUIS capacita nosso chatbot a compreender e interpretar comandos e intenções dos usuários de forma avançada. Ao integrar o LUIS, o chatbot ganha a habilidade de realizar uma análise profunda da linguagem natural, elevando sua capacidade de interpretar perguntas complexas e oferecer respostas precisas. Essa integração não apenas melhora a eficiência nas interações, mas também aumenta a satisfação do usuário ao receber respostas mais contextualizadas e adaptadas ao contexto específico da conversa.
+Microsoft Azure - Text Analytics:
 
-Microsoft Azure - Text Analytics para Análise de Sentimento
+O Text Analytics realiza análise de sentimento em avaliações e interações dos usuários, proporcionando insights valiosos sobre a satisfação do usuário.
+Vantagens:
+Permite ajustes contínuos para melhorar a experiência geral.
+Oferece uma compreensão mais profunda das emoções dos usuários.
 
-A funcionalidade de Text Analytics é aplicada separadamente para realizar uma análise de sentimento em avaliações e interações dos usuários. Esta abordagem proporciona insights valiosos sobre a satisfação do usuário, permitindo ajustes contínuos para melhorar a experiência geral. A capacidade de compreender o sentimento expresso pelos usuários não apenas aprimora a interação, mas também permite que o chatbot responda de maneira mais empática e personalizada, contribuindo para uma experiência mais completa.
+Microsoft Azure - Azure Speech-to-Text:
 
-Azure Speech-to-Text e Text-to-Speech
+Explicação: O Azure Speech-to-Text permite a transcrição precisa da entrada de voz dos usuários, convertendo-a em texto para processamento pelo chatbot.
+Vantagens:
+Amplia as opções de interação, permitindo aos usuários fornecerem comandos por voz.
+Facilita a entrada de dados sem depender apenas de texto.
 
-A integração do Speech-to-Text oferece uma experiência mais ampla de interação. Permitindo que os usuários forneçam comandos ou façam perguntas utilizando a fala, essa funcionalidade amplia significativamente as opções de entrada do usuário, tornando o chatbot mais acessível e conveniente.
+Microsoft Azure - Text-to-Speech:
 
-Por sua vez, o Text-to-Speech contribui para tornar as respostas do chatbot mais dinâmicas. Ao proporcionar uma experiência de usuário mais rica e envolvente com respostas em áudio, o Text-to-Speech adiciona um elemento de personalização, aproximando-se da interação humana e aprimorando a usabilidade do chatbot.
+Explicação: O Text-to-Speech converte as respostas do chatbot em fala, proporcionando uma experiência mais dinâmica e envolvente para os usuários.
+Vantagens:
+Torna as interações mais naturais ao oferecer respostas audíveis.
+Enriquece a experiência do usuário com feedback de áudio.
 
-OpenAI - GPT-3 e ChatBot Inteligente
+OpenAI - GPT-3 e ChatBot Inteligente:
 
-A integração do OpenAI GPT-3 traz uma poderosa capacidade de processamento de linguagem natural para o chatbot. Isso se traduz em respostas mais contextuais e geradas de forma dinâmica. GPT-3 capacita o chatbot a compreender o contexto das conversas, fornecendo respostas mais inteligentes e adaptadas às necessidades específicas do usuário.
+A API GPT-3 da OpenAI proporciona ao chatbot capacidades avançadas de processamento de linguagem natural, gerando respostas mais contextuais e dinâmicas.
+Vantagens:
+Maior inteligência na interação com o usuário.
+Respostas mais naturalmente contextualizadas.
+Computer Vision com OCR (Optical Character Recognition) - PyPDF2:
 
-Computer Vision com OCR (Optical Character Recognition)
+Explicação: O OCR com PyPDF2 extrai texto de PDFs, aprimorando a inteligência do chatbot ao lidar com consultas em bases de conhecimento presentes em documentos PDF.
+Vantagens:
+Enriquece a capacidade do chatbot de extrair informações de documentos.
+Aprimora a busca em bases de conhecimento.
+Envio de Mensagens com smtplib:
 
-A utilização do OCR com PyPDF2 traz uma dimensão visual ao chatbot. Ao extrair texto de documentos PDFs, o chatbot ganha a capacidade de analisar informações presentes em documentos, tornando-o mais inteligente em consultas em bases de conhecimento específicas. Isso contribui para a tomada de decisões mais informadas e respostas mais precisas.
+Explicação: O uso do smtplib permite ao chatbot enviar e-mails, promovendo uma comunicação eficaz e transparente com os usuários.
+Vantagens:
+Transparência direta na comunicação.
+Notificações proativas e personalizadas.
+Confirmação de ações e engajamento contínuo.
+Comunicação assíncrona eficiente.
 
 <br> 
 
