@@ -106,6 +106,16 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
   <li>Comunicação assíncrona eficiente.</li>
 </ul>
 
+<h3>Serviços ou recursos que eu adotaria pra integrar com essa solução em um cenário real:</h3>
+<ul>
+  <li>Azure CosmosDB: Perfeito para armazenamento de contexto e informações do usuário, sem falar que é uma integração extremamente viável, tendo em vista que tudo já é ambiente Microsoft Azure</li>
+  <li>Azure Functios: Seria integrado para fazer tratamentos de logs e insoghts vindos da analise de sentimento e armazenados no blob file Storage, seria basicamente um consumer para alertas de análise do Chatbots e melhoria</li>
+  <li>Azure Blob File Storage: Armazenamento de logs de análise de texto, histórico de usuário, imagens, áudios e mais</li>
+  <li>Azure Private endpoint: Conformidade e segurança no tráfego de informações entre usuário e Azure atráves de um firewall de rede</li>
+  <li>Azure Key Vault: Credenciais de SDK Azure guardados em cofre para maior segurança</li>
+</ul>
+
+
 
 ---
 
