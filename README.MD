@@ -238,8 +238,9 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <h3>.Env</h3>
 
-<p>Para um teste mais interessante com notificações, utilize seu email pessoal pra teste na etapa de cadastro.
-OBS: Essas variáveis que já estão com valores em # notificações podem ser utizatidas traquilamente tendo em vista que o email é de teste e a senha é uma senha de app. Senha de app é uma senha gerada pela google somente para testes de api e aplicações, sem vinculo nenhum com a conta de email, ou seja, a senha de conta é outra e essa que está no .env só pode ser usado pra testes e desenvolvimentos</p>
+<p>Para um teste mais interessante com notificações, utilize seu email pessoal para teste na etapa de cadastro.</p>
+<p><strong style="color: red;">OBS:</strong> Essas variáveis que já estão com valores em # notificações podem ser utilizadas tranquilamente, tendo em vista que o email é de teste e a senha é uma senha de app. Senha de app é uma senha gerada pela Google somente para testes de API e aplicações, sem vínculo nenhum com a conta de email. Ou seja, a senha da conta é outra, e essa que está no .env só pode ser usada para testes e desenvolvimentos.</p>
+
 
 ```sh
 # Chaves OpenAI
