@@ -128,7 +128,7 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 <p>OBS: A numeração a baixo é referente a numeração da arquitetura.</p>
 
-<h2>1 - Uso do LUIS na Navegação Principal do ChatBot:</h2>
+<h3>1 - Uso do LUIS na Navegação Principal do ChatBot:</h3>
 
 <p>No menu principal do seu ChatBot, o Language Understanding Intelligent Service (LUIS) desempenha um papel crucial no reconhecimento de intenções, permitindo uma interação mais inteligente e direcionada com os usuários. Eis como o LUIS é aplicado nesse contexto:</p>
 
