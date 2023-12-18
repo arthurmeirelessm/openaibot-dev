@@ -123,3 +123,14 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 
 
 <h2 style="font-size: 24px; font-weight: bold;">Recursos detalhados detalhados e arquitetura</h2>
+
+<h3>Contexto: Trata-se de um Chatbot da empresa AeroNavigator (Fictício) que tem como assistente virtual a Aria, onde apropria-se de uma voz neural chamada pt-BR-YaraNeural da Microsoft Azure</h3>
+
+<p>OBS: A numeração a baixo é referente a numeração da arquitetura.</p>
+
+<h3>1 - Classes, divisão de responsabilidade e entrada de usuário</h3>
+<p>A estrutua do bot consiste em Arquitetura de Bot Modular e também de cascata, que é usuado em formulários e perguntas consequentes. O bot contém uma classe orquestradora que divide os modulos de entrada do usuário e redirecionam pra classe reconhecida pelo LUIS correlacionada: 
+
+
+
+</p>
