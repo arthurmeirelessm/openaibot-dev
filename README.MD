@@ -60,6 +60,10 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Torna as interações mais naturais ao oferecer respostas audíveis.</li>
   <li>Enriquece a experiência do usuário com feedback de áudio.</li>
+  <li>Facilita a comunicação de informações extensas de maneira mais acessível, especialmente para usuários com dificuldades na leitura.</li>
+  <li>Oferece uma opção conveniente para consumir conteúdo do chatbot em situações onde a leitura de texto não é prática, como ao dirigir ou realizar outras atividades.</li>
+  <li>Possibilita a criação de assistentes virtuais com uma presença mais envolvente e amigável, através da expressividade da fala.</li>
+  <li>Integração eficiente com a API GPT, permitindo que as respostas geradas pelo modelo sejam convertidas em fala de maneira coesa e natural.</li>
 </ul>
 
 <hr>
@@ -70,6 +74,11 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Maior inteligência na interação com o usuário.</li>
   <li>Respostas mais naturalmente contextualizadas.</li>
+ <li>Ampliação da capacidade de compreensão de contextos específicos em uma conversa, permitindo respostas mais personalizadas e relevantes.</li>
+  <li>Enriquecimento da experiência do usuário com diálogos mais fluidos e coerentes.</li>
+  <li>Possibilidade de lidar com perguntas complexas e cenários diversos, melhorando a adaptabilidade do chatbot.</li>
+  <li>Integração eficiente com os serviços da Microsoft Azure, proporcionando uma abordagem abrangente e complementar ao processamento de linguagem natural.</li>
+  <li>Aprimoramento da capacidade do chatbot de compreender e gerar conteúdo textual em diversos domínios, contribuindo para um serviço mais versátil.</li>
 </ul>
 
 <hr>
@@ -80,6 +89,9 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Enriquece a capacidade do chatbot de extrair informações de documentos.</li>
   <li>Aprimora a busca em bases de conhecimento.</li>
+  <li>Integração eficiente com a API GPT-3 da OpenAI, permitindo respostas mais inteligentes e contextualizadas baseadas no conteúdo extraído pelos serviços de OCR.</li>
+  <li>Possibilidade de fornecer respostas mais precisas e relevantes ao usuário, utilizando a base de conhecimento extraída dos documentos PDF.</li>
+  <li>Ampliação da capacidade do chatbot de lidar com consultas complexas e específicas presentes nos documentos, oferecendo uma experiência mais completa aos usuários.</li>
 </ul>
 
 <hr>
