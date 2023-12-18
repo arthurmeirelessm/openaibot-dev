@@ -14,9 +14,7 @@
 <br> 
 
 
-Introdução Técnica ao Chatbot Integrado: Tecnologias e Soluções Avançadas
-
-Desenvolver um chatbot eficiente e inteligente requer a aplicação de diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. No âmbito deste projeto, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure e a poderosa OpenAI, para alcançar um chatbot robusto e inteligente em Python.
+Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas para fornecer uma experiência aprimorada aos usuários. Nesse âmbito, foi utilizado um conjunto de soluções, incluindo SDKs da Microsoft Azure, a poderosa OpenAI e recursos de visão computacional (OCR) externos para alcançar um chatbot robusto e inteligente em Python.
 
 Microsoft Azure - LUIS e Text Analytics
 LUIS (Language Understanding Intelligent Service):
