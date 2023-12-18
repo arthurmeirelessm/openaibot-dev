@@ -23,6 +23,8 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Melhora na compreensão de perguntas complexas.</li>
   <li>Fornecimento de respostas mais precisas.</li>
+  <li>Tunelamento e redirecionamentos mais assertivos que antecedem o prompt do usuário no GPT.</li>
+  <li>Elegância no reconhecimento de intenções e troca de contextos da conversa</li>
 </ul>
 
 <hr>
