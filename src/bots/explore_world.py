@@ -32,11 +32,8 @@ class Explore_world:
         self.error.count_empty_input(user_input)
                             
         luis_intent = self.luis.analyze_language(user_input)
-        
-        print(luis_intent)
-        
+                
         final_input = f"Forneça uma resposta direta e em poucas linhas para essa pergunta: {user_input}"
-        print(final_input)
         intent_actions = {
             "gotoout": self.finalization.introduction,
             "back": lambda: self.travel_assistant.start_conversation(),
@@ -44,13 +41,10 @@ class Explore_world:
         }
         top_intent = luis_intent['topIntent']
 
-        print("passei aqui depois de top intent")
         intent_actions.get(top_intent, self.error.handle_unrecognized_intent)()
-        print(intent_actions)
         self.ask_more_questions(top_intent)
 
     def explore_culture(self, user_input):
-        print("passei aqui")
         self.openAI.generate_response_speech(user_input)
 
     def ask_more_questions(self, luis_intent):

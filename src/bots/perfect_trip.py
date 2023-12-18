@@ -92,12 +92,12 @@ class PerfectTrip:
     
     def ask_more_questions(self, luis_intent):
         if luis_intent == "perfecttrip":
-            print("\nBot: \033[1mDeseja fazer outra pergunta?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial\033[0m\n")
+            print("\nBot: \033[1mDeseja fazer outra pergunta?\n1 - Sim\n2 - Não\n3 Voltar a opção inicial\033[0m\n")
             user_input = input("You: ")
             print("\n")
             if re.search(r"\b(sim|claro|quero|1)\b", user_input, flags=re.IGNORECASE):
-                self.call_speech()
+                self.introduction_response()
             elif re.search(r"\b(n[ãa]o|nopes|nada|2)\b", user_input, flags=re.IGNORECASE):
                 self.finalization.introduction()
-            else:
+            elif re.search(r"\b(voltar|3|retornar|voltando|voltar\satrás)\b", user_input, flags=re.IGNORECASE):
                 self.finalization.travelAssistant.start_conversation()

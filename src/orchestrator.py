@@ -50,7 +50,7 @@ class TravelAssistant:
         return bots.get(analysis_result)
 
     def default_handler(self):
-        print("Desculpa, não consegui entender. 🫤")
+        print("Bot: Desculpa, não consegui entender. 🫤")
         self.start_conversation()
 
     def run(self):

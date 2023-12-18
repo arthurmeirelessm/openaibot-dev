@@ -34,7 +34,7 @@ class PurchaseFlow:
             prompt_optimization = f"Input: {user_input}. Traga informações SOMENTE da cidade, disponibilidade e valor em um formato organizado de texto com tópicos numericos que dão match com a cidade ou país dito em 'input' de acordo com o que tem essa base de conhecimento aqui = {read_result}"
             response_text = self.openai.generate_response_text(prompt_optimization)
             print(response_text)
-            print("\nBot: Alguma opção de passagem aérea disponível mais lhe agradou?\n")
+            print("\nBot: Alguma opção de passagem aérea disponível lhe agradou?\n")
             second_input = input("You: ")
             if re.search(r"\b(n[ãa]o|nopes|nada|nenhuma|nenhuma opção|deixa pra depois)\b", second_input, flags=re.IGNORECASE):
                 self.finalization.introduction()
@@ -49,15 +49,15 @@ class PurchaseFlow:
             print(response_text)
             print("\nBot: Tudo certo!? Em breve você receberá um email para detalhes de pagamento.")
             self.notification.send_purchase_details(email)
-            self.ask_more_questions()
+            self.ask_more_questions(email)
             
     
-    def ask_more_questions(self):
+    def ask_more_questions(self, email):
             print("\nBot: \033[1mDeseja ver mais passagens?\n1 - Sim\n2 - Não\n3 - Voltar a opção inicial\033[0m\n")
             user_input = input("You: ")
             print("\n")
             if re.search(r"\b(sim|claro|quero|s|1)\b", user_input, flags=re.IGNORECASE):
-                self.firt_interation()
+                self.firt_interation(email)
             elif re.search(r"\b(n[ãa]o|nopes|nada|finalizar2)\b", user_input, flags=re.IGNORECASE):
                 self.finalization.introduction()
             else:
