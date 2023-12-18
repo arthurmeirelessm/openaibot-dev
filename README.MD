@@ -35,6 +35,8 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Permite ajustes contínuos para melhorar a experiência geral.</li>
   <li>Oferece uma compreensão mais profunda das emoções dos usuários.</li>
+  <li>Utilização pra contagem de LOGS que podem ser posteriormente armazenados em um Azure Blob Store sendo consumido por um Azure Functions, retratando ou alertando responsáveis melhora contínua do Chatbot</li>
+  <li>Finalização contextualizada</li>
 </ul>
 
 <hr>
@@ -45,6 +47,9 @@ Essa solução de Chatbot foi desenvolvida com diversas tecnologias avançadas p
 <ul>
   <li>Amplia as opções de interação, permitindo aos usuários fornecerem comandos por voz.</li>
   <li>Facilita a entrada de dados sem depender apenas de texto.</li>
+  <li>Deixa o Chatbot mais inclusivo e imersivo.</li>
+  <li>Possibilita experiências de usuário mais naturais, aproximando-se da forma como as pessoas se comunicam verbalmente.</li>
+  <li>Enriquece as interações ao combinar entrada de voz com respostas geradas pelo GPT, proporcionando uma experiência mais natural e envolvente.</li>
 </ul>
 
 <hr>
